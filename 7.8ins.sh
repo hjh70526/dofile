@@ -15,13 +15,7 @@ then true
 else echo '没有wget命令';exit
 fi
 
-wget -O /ncroot/tmp.tar.gz $mirror
-
-[ -e /ncroot/tmp.tar.gz ]||do
-echo '下载失败,可能链接失效，等待更新';exit
-done
-
-tar xzf /ncroot/tmp.tar.gz -C /ncroot
+wget -O /ncroot/tmp.tar.gz $mirror;tar xzf /ncroot/tmp.tar.gz -C /ncroot
 
 cp -a /etc/fstab /ncroot/etc/fstab
 
