@@ -48,7 +48,7 @@ done
 #passwd
 echo root:cnddy159|chpasswd
 #
-
+echo nameserver\ 8.8.8.8 >/etc/resolv.conf
 #end
 rm -rf /ncroot /tmp.tar.gz
 echo "安装完成"
